@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Text_Editor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="880" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="500" Width="880" ResizeMode="CanMinimize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.1*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <DockPanel>
+            <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBox Height="35" Name="Search" Width="200" FontSize="20" Margin="10 0 0 0"></TextBox>
                 <Button Width="50" Height="35" Background="Transparent" Margin="10 0 0 0" Name="Load" Click="Load_Click">
@@ -34,6 +35,17 @@
    <Button Margin="7 5 5 5" VerticalAlignment="Center" Content="Select All" Width="120" Height="45" FontSize="23" Background="Transparent" Name="Select" FontWeight="DemiBold" Click="Select_Click"/>
 
 
+            </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name="Fonts" Width="150" Height="30" Margin="10 -5 5 5"/>
+                    <ComboBox Name="Sizes" Margin="50 -5 5 5" Width="70" Height="30" />
+                    <Button x:Name="Bold" Margin="50 -5 5 5" Content="B" FontSize="20" FontWeight="Bold" Width="40" Height="30" Click="Bold_Click"/>
+                    <Button x:Name="Italic" Margin="0 -5 5 5" Content="I" FontSize="20" FontWeight="Bold" Width="40" Height="30" Click="Italic_Click"/>
+                    <Button x:Name="Underline" Margin="0 -5 5 5"  FontSize="20" FontWeight="Bold" Width="40" Height="30" Click="Underline_Click">
+                        <Image Source="/Images/underline.png"/>
+                    </Button>
+                    <Button x:Name="Color" Margin="50 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="Black" Click="Color_Click"/>
+                </StackPanel>
             </StackPanel>
         </DockPanel>
         <RichTextBox Name="Richtext" Grid.Row="1" Margin="10" Background="#e7e7e7"/>

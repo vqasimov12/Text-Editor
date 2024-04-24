@@ -9,5 +9,6 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/underline.png")]
 
 

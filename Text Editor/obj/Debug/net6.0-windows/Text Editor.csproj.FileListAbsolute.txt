@@ -21,3 +21,4 @@ C:\Users\user\source\repos\Text Editor\Text Editor\obj\Debug\net6.0-windows\refi
 C:\Users\user\source\repos\Text Editor\Text Editor\obj\Debug\net6.0-windows\Text Editor.pdb
 C:\Users\user\source\repos\Text Editor\Text Editor\obj\Debug\net6.0-windows\Text Editor.genruntimeconfig.cache
 C:\Users\user\source\repos\Text Editor\Text Editor\obj\Debug\net6.0-windows\ref\Text Editor.dll
+C:\Users\user\source\repos\Text Editor\Text Editor\bin\Debug\net6.0-windows\Images\underline.png
