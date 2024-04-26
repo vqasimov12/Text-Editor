@@ -13,44 +13,47 @@
         </Grid.RowDefinitions>
         <DockPanel>
             <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBox Height="35" Name="Search" Width="200" FontSize="20" Margin="10 0 0 0"></TextBox>
-                <Button Width="50" Height="35" Background="Transparent" Margin="10 0 0 0" Name="Load" Click="Load_Click">
-                    <Image Source="/Images/1.png"/>
-                </Button>
-                <Button x:Name="Save" Width="50" Height="35" Background="Transparent" Margin="10 0 0 0" Content="Save" FontSize="20" FontWeight="DemiBold" Click="Save_Click"/>
-                <Grid VerticalAlignment="Center" Height="100" Width="156">
-
-                    <CheckBox VerticalAlignment="Center" Margin="5 0 0 0" Content="Auto Save" FontWeight="DemiBold">
-                        <CheckBox.LayoutTransform>
-                            <ScaleTransform ScaleX="2" ScaleY="2" />
-                        </CheckBox.LayoutTransform>
-
-                    </CheckBox>
-                </Grid>
-       
-                <Button Margin="5 5 5 5" VerticalAlignment="Center" Content="Cut" Width="70" Height="45" FontSize="23" Background="Transparent" Name="Cut" FontWeight="DemiBold" Click="Cut_Click"/>
-                <Button Margin="5 5 5 5" VerticalAlignment="Center" Content="Copy" Width="70" Height="45" FontSize="23" Background="Transparent" Name="Copy" FontWeight="DemiBold" Click="Copy_Click"/>
-                <Button Margin="5 5 5 5" VerticalAlignment="Center" Content="Paste" Width="70" Height="45" FontSize="23" Background="Transparent" Name="Paste" FontWeight="DemiBold" Click="Paste_Click"/>
-   <Button Margin="7 5 5 5" VerticalAlignment="Center" Content="Select All" Width="120" Height="45" FontSize="23" Background="Transparent" Name="Select" FontWeight="DemiBold" Click="Select_Click"/>
-
-
-            </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <ComboBox Name="Fonts" Width="150" Height="30" Margin="10 -5 5 5"/>
-                    <ComboBox Name="Sizes" Margin="50 -5 5 5" Width="70" Height="30" />
+                    <TextBox Height="35" Name="Search" Width="200" FontSize="20" Margin="10 0 0 0" IsReadOnly="True" Background="LightGray" BorderThickness="0"/>
+                    <Button Width="50" Height="35" Background="Transparent" Margin="10 0 0 0" Name="Load" Click="Load_Click">
+                        <Image Source="/Images/1.png"/>
+                    </Button>
+                    <Button x:Name="Save" Width="50" Height="35" Background="Transparent" Margin="10 0 0 0" Content="Save" FontSize="20" FontWeight="DemiBold" Click="Save_Click"/>
+                    <Grid VerticalAlignment="Center" Height="100" Width="156">
+
+                        <CheckBox VerticalAlignment="Center" Margin="5 0 0 0" Content="Auto Save" FontWeight="DemiBold" x:Name="Check" Checked="Check_Checked">
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="2" ScaleY="2" />
+                            </CheckBox.LayoutTransform>
+
+                        </CheckBox>
+                    </Grid>
+
+                    <Button Margin="5 5 5 5" VerticalAlignment="Center" Content="Cut" Width="70" Height="45" FontSize="23" Background="Transparent" Name="Cut" FontWeight="DemiBold" Click="Cut_Click"/>
+                    <Button Margin="5 5 5 5" VerticalAlignment="Center" Content="Copy" Width="70" Height="45" FontSize="23" Background="Transparent" Name="Copy" FontWeight="DemiBold" Click="Copy_Click"/>
+                    <Button Margin="5 5 5 5" VerticalAlignment="Center" Content="Paste" Width="70" Height="45" FontSize="23" Background="Transparent" Name="Paste" FontWeight="DemiBold" Click="Paste_Click"/>
+                    <Button Margin="7 5 5 5" VerticalAlignment="Center" Content="Select All" Width="120" Height="45" FontSize="23" Background="Transparent" Name="Select" FontWeight="DemiBold" Click="Select_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox Name="Fonts" Width="150" Height="30" Margin="10 -5 5 5" SelectionChanged="Fonts_SelectionChanged"/>
+                    <ComboBox Name="Sizes" Margin="50 -5 5 5" Width="70" Height="30" SelectionChanged="Sizes_SelectionChanged"/>
                     <Button x:Name="Bold" Margin="50 -5 5 5" Content="B" FontSize="20" FontWeight="Bold" Width="40" Height="30" Click="Bold_Click"/>
                     <Button x:Name="Italic" Margin="0 -5 5 5" Content="I" FontSize="20" FontWeight="Bold" Width="40" Height="30" Click="Italic_Click"/>
                     <Button x:Name="Underline" Margin="0 -5 5 5"  FontSize="20" FontWeight="Bold" Width="40" Height="30" Click="Underline_Click">
                         <Image Source="/Images/underline.png"/>
                     </Button>
-                    <Button x:Name="Color" Margin="50 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="Black" Click="Color_Click"/>
+                    <Button x:Name="black" Margin="50 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="Black" Click="Color_Click"/>
+                    <Button x:Name="red" Margin="0 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="red" Click="Color_Click"/>
+                    <Button x:Name="green" Margin="0 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="green" Click="Color_Click"/>
+                    <Button x:Name="blue" Margin="0 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="Blue" Click="Color_Click"/>
+               <Button x:Name="aqua" Margin="0 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="Aqua" Click="Color_Click"/>
+                 <Button x:Name="yellow" Margin="0 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="Yellow" Click="Color_Click"/>
+                  <Button x:Name="orange" Margin="0 -5 5 5" FontSize="20" FontWeight="Bold" Width="40" Height="30" Background="orange" Click="Color_Click"/>
                 </StackPanel>
             </StackPanel>
         </DockPanel>
-        <RichTextBox Name="Richtext" Grid.Row="1" Margin="10" Background="#e7e7e7"/>
-
-
+        <RichTextBox Name="Richtext" Grid.Row="1" Margin="10" Background="#e7e7e7" TextChanged="Richtext_TextChanged" Padding="5 10 5 10" AllowDrop="True"/>
 
     </Grid>
 </Window>
+    
